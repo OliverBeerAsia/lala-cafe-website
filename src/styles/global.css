@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts are loaded in Layout.astro head for better performance */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-body text-lala-charcoal bg-lala-cream;
+    font-feature-settings: "kern" 1, "liga" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-semibold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  /* Primary Button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 
+           bg-lala-orange text-white font-display font-semibold 
+           rounded-full transition-all duration-300
+           hover:bg-lala-gold hover:scale-105 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-lala-orange focus:ring-offset-2;
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 
+           bg-transparent border-2 border-lala-orange text-lala-orange 
+           font-display font-semibold rounded-full transition-all duration-300
+           hover:bg-lala-orange hover:text-white hover:scale-105
+           focus:outline-none focus:ring-2 focus:ring-lala-orange focus:ring-offset-2;
+  }
+
+  /* Dark Button (for light backgrounds) */
+  .btn-dark {
+    @apply inline-flex items-center justify-center px-6 py-3 
+           bg-lala-black text-lala-cream font-display font-semibold 
+           rounded-full transition-all duration-300
+           hover:bg-lala-charcoal hover:scale-105 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-lala-black focus:ring-offset-2;
+  }
+
+  /* Section Container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Card Style */
+  .card {
+    @apply bg-white rounded-2xl shadow-md overflow-hidden 
+           transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* Menu Card */
+  .menu-card {
+    @apply bg-white rounded-xl p-6 shadow-sm border border-gray-100
+           transition-all duration-300 hover:shadow-md hover:border-lala-orange/30;
+  }
+
+  /* Section Heading */
+  .section-heading {
+    @apply text-center mb-12;
+  }
+
+  .section-heading h2 {
+    @apply text-lala-charcoal mb-4;
+  }
+
+  .section-heading p {
+    @apply text-gray-600 max-w-2xl mx-auto text-lg;
+  }
+
+  /* Decorative underline */
+  .heading-underline {
+    @apply w-24 h-1 bg-lala-orange mx-auto rounded-full mt-4;
+  }
+}
+
+@layer utilities {
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-gradient-to-r from-lala-orange to-lala-gold bg-clip-text text-transparent;
+  }
+
+  /* Smooth image hover */
+  .img-hover {
+    @apply transition-transform duration-500 hover:scale-110;
+  }
+}

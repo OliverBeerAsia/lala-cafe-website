@@ -1,0 +1,19 @@
+---
+export interface Props {
+  name: string;
+  description: string;
+  price: string;
+}
+
+const { name, description, price } = Astro.props;
+---
+
+<div class="menu-card flex justify-between items-start gap-4">
+  <div class="flex-1">
+    <h4 class="font-display font-semibold text-lala-charcoal text-lg mb-1">{name}</h4>
+    <p class="text-gray-600 text-sm leading-relaxed">{description}</p>
+  </div>
+  <span class="text-lala-orange font-display font-bold text-lg whitespace-nowrap">
+    ${price}
+  </span>
+</div>

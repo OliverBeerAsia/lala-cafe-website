@@ -1,0 +1,107 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+}
+
+const { 
+  title, 
+  description = "LaLa Cafe and Bar - Auckland's cozy, artsy cafe in Parnell. Enjoy great coffee, delicious breakfast, lunch & dinner in our warm atmosphere with live music on weekends.",
+  image = "/images/lala-og.jpg",
+  canonicalURL = Astro.url.href
+} = Astro.props;
+
+const siteTitle = title === "Home" ? "LaLa Cafe and Bar | Parnell, Auckland" : `${title} | LaLa Cafe and Bar`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{siteTitle}</title>
+    <meta name="title" content={siteTitle} />
+    <meta name="description" content={description} />
+    <meta name="author" content="LaLa Cafe and Bar" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:locale" content="en_NZ" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={siteTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="NZ-AUK" />
+    <meta name="geo.placename" content="Parnell, Auckland" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "LaLa Cafe and Bar",
+        "image": "https://lalacafe.co.nz/images/lala-logo.png",
+        "url": "https://lalacafe.co.nz",
+        "telephone": "+64 9 308 9337",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Parnell Road",
+          "addressLocality": "Parnell",
+          "addressRegion": "Auckland",
+          "postalCode": "1052",
+          "addressCountry": "NZ"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -36.8557,
+          "longitude": 174.7821
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "07:00",
+          "closes": "21:00"
+        },
+        "servesCuisine": ["Cafe", "Brunch", "New Zealand", "International"],
+        "priceRange": "$$",
+        "acceptsReservations": "True",
+        "hasMenu": "https://lalacafe.co.nz/menu"
+      }
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

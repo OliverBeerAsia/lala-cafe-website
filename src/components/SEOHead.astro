@@ -1,0 +1,62 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonicalURL = Astro.url.href,
+  image = '/images/lala-og.jpg',
+  type = 'website',
+  noindex = false
+} = Astro.props;
+
+const siteName = 'LaLa Cafe and Bar';
+const fullTitle = title === 'Home' ? `${siteName} | Parnell, Auckland` : `${title} | ${siteName}`;
+---
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+<meta name="author" content={siteName} />
+<link rel="canonical" href={canonicalURL} />
+
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content="en_NZ" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+
+<!-- Geo Tags for Local SEO -->
+<meta name="geo.region" content="NZ-AUK" />
+<meta name="geo.placename" content="Parnell, Auckland" />
+<meta name="geo.position" content="-36.8557;174.7821" />
+<meta name="ICBM" content="-36.8557, 174.7821" />
+
+<!-- Additional SEO -->
+<meta name="keywords" content="LaLa Cafe, cafe Parnell, brunch Auckland, breakfast Parnell Road, restaurant Auckland, live music cafe, coffee Auckland" />
+<meta name="format-detection" content="telephone=yes" />
+<meta name="theme-color" content="#F5A623" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/lala-logo.png" />

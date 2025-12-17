@@ -1,0 +1,101 @@
+{
+  "categories": [
+    {
+      "id": "coffee-drinks",
+      "name": "Coffee & Drinks",
+      "description": "Start your day right with our specialty coffee and refreshing beverages",
+      "items": [
+        { "name": "Espresso", "price": "4.50", "description": "Rich, bold single shot" },
+        { "name": "Long Black", "price": "5.00", "description": "Double espresso with hot water" },
+        { "name": "Flat White", "price": "5.50", "description": "Velvety smooth, NZ classic" },
+        { "name": "Cappuccino", "price": "5.50", "description": "Espresso with steamed milk foam" },
+        { "name": "Latte", "price": "5.50", "description": "Smooth espresso with silky milk" },
+        { "name": "Mocha", "price": "6.00", "description": "Espresso, chocolate, steamed milk" },
+        { "name": "Hot Chocolate", "price": "5.50", "description": "Rich and creamy" },
+        { "name": "Chai Latte", "price": "5.50", "description": "Spiced tea with steamed milk" },
+        { "name": "Fresh Juice", "price": "7.00", "description": "Orange, apple, or seasonal blend" },
+        { "name": "Smoothie", "price": "8.50", "description": "Fresh fruit blend of the day" }
+      ]
+    },
+    {
+      "id": "breakfast",
+      "name": "Breakfast & Brunch",
+      "description": "Served all day, because great breakfast shouldn't have a deadline",
+      "items": [
+        { "name": "Big Breakfast", "price": "26.00", "description": "Two eggs any style, sausages, bacon, mushrooms, hash browns, grilled tomato, and toast" },
+        { "name": "Mini Breakfast", "price": "18.00", "description": "Egg, hash brown, bacon, sausage, and toast" },
+        { "name": "Energy Breakfast", "price": "22.00", "description": "Egg, tomato, mushroom, spinach, bacon, and toast" },
+        { "name": "Eggs Any Style on Toast", "price": "14.00", "description": "Poached, fried, or scrambled eggs on toast" },
+        { "name": "Eggs Benedict", "price": "24.00", "description": "Two eggs on Vienna sourdough with bacon, mushrooms, or smoked salmon" },
+        { "name": "Smoked Salmon Scrambled Eggs", "price": "26.00", "description": "On toasted croissant with avocado and hollandaise" },
+        { "name": "LaLa King French Omelette", "price": "24.00", "description": "Rich and creamy omelette with a delicate blend of flavours" },
+        { "name": "Pancakes", "price": "22.00", "description": "With bacon, maple syrup, fruit salad, banana, and berry compote" },
+        { "name": "Toasted Muesli", "price": "16.00", "description": "Served with natural yoghurt and fruit salad" },
+        { "name": "Toasted Vienna Sourdough", "price": "10.00", "description": "With butter and your choice of jam, honey, or marmite" }
+      ]
+    },
+    {
+      "id": "lunch",
+      "name": "Lunch",
+      "description": "Fresh salads, hearty sandwiches, and satisfying mains",
+      "items": [
+        { "name": "Classic BLT", "price": "18.00", "description": "San Francisco sourdough with crispy bacon, tomato, lettuce, aioli, and chips" },
+        { "name": "Chicken Super Sandwich", "price": "22.00", "description": "Grilled chicken breast, lettuce, tomato, avocado, mustard, and basil pesto with chips" },
+        { "name": "Smoked Chicken Salad", "price": "24.00", "description": "Smoked chicken, feta, tomato, avocado, red pepper, and mixed greens with vinaigrette" },
+        { "name": "Thai Chicken Salad", "price": "24.00", "description": "Chicken breast, red pepper, tomato, and salad with Thai sauce" },
+        { "name": "LaLa Carbonara", "price": "26.00", "description": "Chicken breast, olive oil, garlic, mushrooms, bacon with white wine creamy sauce fettuccine" },
+        { "name": "Bagel - Smoked Salmon", "price": "18.00", "description": "With capers and cream cheese" },
+        { "name": "Bagel - Ham & Pesto", "price": "16.00", "description": "Ham, tomato, and basil pesto" },
+        { "name": "Bagel - Feta & Avocado", "price": "16.00", "description": "Feta, avocado, and spinach" }
+      ]
+    },
+    {
+      "id": "dinner",
+      "name": "Dinner",
+      "description": "Hearty evening meals to end your day right",
+      "items": [
+        { "name": "Kiwi Classic Steak & Eggs", "price": "34.00", "description": "Scotch fillet, eggs any style, 13mm steak cut chips, and creamy parmesan mushrooms" },
+        { "name": "Grilled Salmon", "price": "32.00", "description": "Atlantic salmon with seasonal vegetables and lemon butter sauce" },
+        { "name": "Lamb Cutlets", "price": "36.00", "description": "New Zealand lamb with rosemary, roasted vegetables, and mint sauce" },
+        { "name": "Chicken Schnitzel", "price": "28.00", "description": "Crumbed chicken breast with chips, salad, and aioli" },
+        { "name": "Fish & Chips", "price": "26.00", "description": "Beer-battered fish with thick cut chips and tartare sauce" }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts & Pastries",
+      "description": "Sweet treats to complete your visit",
+      "items": [
+        { "name": "Affogato", "price": "8.00", "description": "Vanilla ice cream drowned in espresso" },
+        { "name": "New York Cheesecake", "price": "12.00", "description": "Classic creamy cheesecake with berry compote" },
+        { "name": "Chocolate Brownie", "price": "10.00", "description": "Warm brownie with vanilla ice cream" },
+        { "name": "Cabinet Cake Selection", "price": "8.00", "description": "Ask about today's freshly baked selection" },
+        { "name": "Scone with Jam & Cream", "price": "8.00", "description": "Fresh baked scone with jam and whipped cream" }
+      ]
+    },
+    {
+      "id": "bar",
+      "name": "Bar & Drinks",
+      "description": "Fully licensed - wines, beers, and cocktails",
+      "items": [
+        { "name": "House Wine", "price": "10.00", "description": "Glass of red, white, or rosé" },
+        { "name": "Premium Wine", "price": "14.00", "description": "Selection of NZ wines by the glass" },
+        { "name": "Craft Beer", "price": "10.00", "description": "Local and imported craft beers" },
+        { "name": "Tap Beer", "price": "8.00", "description": "Selection of tap beers" },
+        { "name": "Espresso Martini", "price": "18.00", "description": "Vodka, coffee liqueur, fresh espresso" },
+        { "name": "Aperol Spritz", "price": "16.00", "description": "Aperol, prosecco, soda" },
+        { "name": "Classic Margarita", "price": "16.00", "description": "Tequila, lime, triple sec" }
+      ]
+    },
+    {
+      "id": "specials",
+      "name": "Daily Specials",
+      "description": "Chef's rotating specials - ask your server for today's offerings",
+      "items": [
+        { "name": "Soup of the Day", "price": "14.00", "description": "Freshly made with crusty bread" },
+        { "name": "Chef's Special", "price": "Market", "description": "Daily creation - ask your server" },
+        { "name": "Sunday Roast", "price": "32.00", "description": "Traditional roast with all the trimmings (Sundays only)" }
+      ]
+    }
+  ]
+}
