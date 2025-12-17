@@ -9,7 +9,7 @@ export interface Props {
 const { 
   title, 
   description = "LaLa Cafe and Bar - Auckland's cozy, artsy cafe in Parnell. Enjoy great coffee, delicious breakfast, lunch & dinner in our warm atmosphere with live music on weekends.",
-  image = "/images/lala-og.jpg",
+  image = "https://lalacafe.co.nz/images/lala-logo.png",
   canonicalURL = Astro.url.href
 } = Astro.props;
 
@@ -35,7 +35,7 @@ const siteTitle = title === "Home" ? "LaLa Cafe and Bar | Parnell, Auckland" : `
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={image.startsWith('http') ? image : `https://lalacafe.co.nz${image}`} />
     <meta property="og:locale" content="en_NZ" />
 
     <!-- Twitter -->
@@ -43,7 +43,7 @@ const siteTitle = title === "Home" ? "LaLa Cafe and Bar | Parnell, Auckland" : `
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={siteTitle} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={image} />
+    <meta property="twitter:image" content={image.startsWith('http') ? image : `https://lalacafe.co.nz${image}`} />
 
     <!-- Geo Tags for Local SEO -->
     <meta name="geo.region" content="NZ-AUK" />
